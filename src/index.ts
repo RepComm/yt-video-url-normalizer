@@ -1,19 +1,16 @@
 
-import { EXPONENT_CSS_BODY_STYLES, EXPONENT_CSS_STYLES, Panel, Text } from "@repcomm/exponent-ts"
-
-EXPONENT_CSS_STYLES.mount(document.head);
-EXPONENT_CSS_BODY_STYLES.mount(document.head);
+import { UIBuilder } from "@roguecircuitry/htmless";
 
 async function main () {
   
-  const container = new Panel()
-  .setId("container")
-  .mount(document.body);
+  let ui = new UIBuilder();
 
-  const title = new Text()
-  .setTextContent("Hello World")
-  .mount(container);
-  
+  ui.create("div").id("container").mount(document.body);
+  let container = ui.e;
+
+  ui.create("span").textContent("Hello World").mount(container);
+
+    
 }
 
 main();

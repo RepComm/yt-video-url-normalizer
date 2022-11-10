@@ -3,7 +3,7 @@
 A template setup for:
 - TypeScript ( using [babel](https://github.com/babel/babel) )
 - import maps ( including [this polyfill](https://github.com/guybedford/es-module-shims) )
-- And also optionally [show-casing exponent-ts](https://github.com/RepComm/exponent-ts)
+- And also optionally [show-casing @roguecircuitry/htmless](https://github.com/RogueCircuitry/htmless)
 
 ## Function
 

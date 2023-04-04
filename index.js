@@ -114,8 +114,8 @@ async function main() {
     flex: "1",
     margin: "0.5em",
     borderRadius: "0.5em",
-    backgroundColor: "green"
-  }).textContent("Generate").mount(vsplit).on("click", evt => {
+    backgroundColor: "#99c199"
+  }).textContent("Generate / Copy to Clipboard").mount(vsplit).on("click", evt => {
     //clear output
     while (_output.childElementCount > 0) {
       _output.removeChild(_output.firstChild);
@@ -135,6 +135,12 @@ async function main() {
       let link = ui.create("a").mount(item).e;
       link.href = `https://${url}`;
       link.textContent = url;
+    }
+    let text = _output.innerText.trim();
+    try {
+      navigator.clipboard.writeText(text);
+    } catch (ex) {
+      alert(`Issue copying: ${ex}`);
     }
   }).e;
 }

@@ -152,7 +152,7 @@ async function main() {
     borderRadius: "0.5em",
     backgroundColor: "#99c199"
   })
-  .textContent("Generate")
+  .textContent("Generate / Copy to Clipboard")
   .mount(vsplit)
   .on("click", (evt) => {
     //clear output
@@ -180,6 +180,15 @@ async function main() {
       link.href = `https://${url}`;
       link.textContent = url;
     }
+
+    let text = _output.innerText.trim();
+
+    try {
+      navigator.clipboard.writeText(text);
+    } catch (ex) {
+      alert(`Issue copying: ${ex}`);
+    }
+
   }).e;
 }
 

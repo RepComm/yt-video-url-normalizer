@@ -1,19 +1,9 @@
-# ts-map-babel-template
+# yt-video-url-normalizer
 
-A template setup for:
-- TypeScript ( using [babel](https://github.com/babel/babel) )
-- import maps ( including [this polyfill](https://github.com/guybedford/es-module-shims) )
-- And also optionally [show-casing @roguecircuitry/htmless](https://github.com/RogueCircuitry/htmless)
+I perform a repetitive function at work that requires youtube videos to end up in a common format.
 
-## Function
+This tool will read youtube video urls and output them in the format:
+`www.youtube.com/watch?v=${videoId}`
+In a single column table, aka its pastable into a spreadsheet thanks to rich text editing features.
 
-Compile /src directory with:
-`npm run build`
-<br/>
-File copy is set up as well for:
-`src/index.ts` -> `./index.js`<br/>
-`src/index.html` -> `./index.html`
-
-Output is in the same directory as package.json for sake of import maps
-
-I regularly use this for starting new projects of my own, and therefor it should stay somewhat up-to-date.
+If you find bugs, please make an issue and I'll address it.
